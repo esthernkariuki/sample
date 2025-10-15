@@ -7,7 +7,7 @@ import RegisterFarmerModal from "../FarmerRegistration";
 import { FaSearch, FaPlus } from "react-icons/fa";
 import { Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Paper, Snackbar, Alert } from "@mui/material";
 import { UserType } from "../../../utils/types/users";
-import MqttSubscriber from "@/app/hivemq/page";
+
 
 export default function FarmersPage() {
   const { users, loading, error, refetch } = useFetchUsers();
@@ -55,7 +55,6 @@ export default function FarmersPage() {
 
   return (
     <div className="min-h-screen md:ml-80 pr-10 py-7">
-    <MqttSubscriber/>
       <h1 className="text-[#7B3F30] text-[30px] font-bold mb-5">Farmer&apos;s Registration</h1>
       <div className="flex justify-between mb-6">
         <div className="relative w-90">

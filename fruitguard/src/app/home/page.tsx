@@ -7,6 +7,7 @@ import { Card } from "../utils/type";
 import { PaginationControlsProps } from "../utils/type";
 import { FiSearch } from "react-icons/fi";
 import AdminLayout from "../sharedComponents/AdminLayout";
+import MqttSubscriber from "../hivemq/page";
 
 export default function HomePage() {
   const { agrovets, agrovetsCount } = useFetchAgrovets();
@@ -29,6 +30,7 @@ export default function HomePage() {
   return (
     <AdminLayout>
       <div className="flex min-h-screen">
+       <MqttSubscriber/>
         <main className="flex-1 p-4 lg:p-5 xl:p-6 bg-[#f9f6f3] font-nunito text-black ml-[18rem]">
           <div className="max-w-5xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-[1440px]">
             <h1 className="text-[#683929] text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl font-bold mb-4 mt-2">
