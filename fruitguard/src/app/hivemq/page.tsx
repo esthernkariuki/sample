@@ -13,9 +13,9 @@ const MqttSubscriber = () => {
       password: process.env.NEXT_PUBLIC_MQTT_PASSWORD || '',
     };
     const backendUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
     const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
     const brokerUrl = broker.replace(/^ws(s)?:/, protocol);
+
     const client = mqtt.connect(brokerUrl, options);
 
     client.on('connect', () => {
